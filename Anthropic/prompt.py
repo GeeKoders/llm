@@ -16,7 +16,7 @@ def add_assistant_message(messages, text):
     assistant_message = {"role": "assistant", "content": text}
     messages.append(assistant_message)
 
-def chat(messages, system = None, temperature=0.0):
+def chat(messages, system = None, temperature=0.0, stop_sequences=None):
     if not messages:
         raise ValueError("Messages list cannot be empty")
     params = {
@@ -27,6 +27,8 @@ def chat(messages, system = None, temperature=0.0):
     }
     if system:
         params["system"] = system
-        
+    if stop_sequences:
+        params["stop_sequences"] = stop_sequences
+
     response = client.messages.create(**params)
     return response.content[0].text
