@@ -16,13 +16,14 @@ def add_assistant_message(messages, text):
     assistant_message = {"role": "assistant", "content": text}
     messages.append(assistant_message)
 
-def chat(messages, system = None):
+def chat(messages, system = None, temperature=1.0):
     if not messages:
         raise ValueError("Messages list cannot be empty")
     params = {
         "model": "claude-3-5-sonnet-20241022",
         "max_tokens": 1000,
-        "messages": messages
+        "messages": messages,
+        "temperature": temperature
     }
     if system:
         params["system"] = system
