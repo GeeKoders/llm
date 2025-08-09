@@ -16,7 +16,7 @@ def add_assistant_message(messages, text):
     assistant_message = {"role": "assistant", "content": text}
     messages.append(assistant_message)
 
-def chat(messages, system = None, temperature=0.0, stop_sequences=None):
+def chat(messages, system = None, temperature=0.0, stream=False, stop_sequences=None):
     if not messages:
         raise ValueError("Messages list cannot be empty")
     params = {
@@ -27,6 +27,14 @@ def chat(messages, system = None, temperature=0.0, stop_sequences=None):
     }
     if system:
         params["system"] = system
+    if stream:
+        params["stream"] = True
+
+        with client.messages.stream(**params) as stream:
+            for chunk in stream:
+                if hasattr(chunk, "choices"):
+                    return chunk.choices[0].message
+
     if stop_sequences:
         params["stop_sequences"] = stop_sequences
 
