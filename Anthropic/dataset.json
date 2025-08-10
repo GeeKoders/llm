@@ -1,17 +1,18 @@
 [
   {
-    "task": "Create a function to validate an AWS IAM username follows specific naming conventions",
-    "format": "python",
-    "solution_criteria": "Username must be 1-64 characters, start with a letter, and only contain letters, numbers, and specific allowed symbols (+=-,.@_)"
-  },
-  {
-    "task": "Write a JSON policy that restricts S3 bucket access to a specific IP range",
-    "format": "json",
-    "solution_criteria": "Policy must include source IP condition, clearly define allowed IP CIDR block, and limit actions to read-only S3 operations"
-  },
-  {
-    "task": "Develop a regex to extract AWS resource IDs from a log string",
-    "format": "regex",
-    "solution_criteria": "Regex must match common AWS resource ID patterns like 'i-' for EC2 instances, 'vol-' for EBS volumes, or 'arn:aws:' for ARNs with high accuracy"
+    "prompt_inputs": {
+      "height": "180",
+      "weight": "75",
+      "goal": "Ultra-endurance performance optimization",
+      "restrictions": "Gluten-free, no dairy"
+    },
+    "solution_criteria": [
+      "Provides 4000-4500 daily calories",
+      "Maintains 55-60% carbohydrate, 20-25% protein, 20-25% fat macronutrient ratio",
+      "Includes strategic pre/post workout nutrition timing",
+      "Meets gluten-free and dairy-free requirements"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Test the meal plan generation with an extreme endurance athlete (e.g., ultramarathon runner) requiring high-calorie, nutrient-dense meals with specific macronutrient ratios and timing considerations"
   }
 ]
