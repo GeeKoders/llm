@@ -1,14 +1,14 @@
 [
   {
-    "task": "Create a regex to validate an AWS IAM username, which must be 1-64 characters long, contain only alphanumeric characters and certain symbols (_+=,.@-)",
-    "format": "regex"
+    "task": "Create a JSON configuration for an AWS EC2 instance with specific tags, instance type, and security group",
+    "format": "json"
   },
   {
-    "task": "Write a Python function to convert an AWS EC2 instance state code to a human-readable string (e.g., 0 = 'pending', 16 = 'running')",
+    "task": "Write a Python function to extract AWS resource IDs from a CloudFormation stack output",
     "format": "python"
   },
   {
-    "task": "Create a JSON configuration object for defining an AWS S3 bucket policy that allows read-only access to a specific IAM role",
-    "format": "json"
+    "task": "Develop a regular expression to validate an AWS IAM user name (lowercase letters, numbers, and specific allowed special characters)",
+    "format": "regex"
   }
 ]
