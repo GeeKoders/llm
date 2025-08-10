@@ -1,14 +1,17 @@
 [
   {
-    "task": "Create a JSON configuration for an AWS EC2 instance with specific tags, instance type, and security group",
-    "format": "json"
+    "task": "Create a function to validate an AWS IAM username follows specific naming conventions",
+    "format": "python",
+    "solution_criteria": "Username must be 1-64 characters, start with a letter, and only contain letters, numbers, and specific allowed symbols (+=-,.@_)"
   },
   {
-    "task": "Write a Python function to extract AWS resource IDs from a CloudFormation stack output",
-    "format": "python"
+    "task": "Write a JSON policy that restricts S3 bucket access to a specific IP range",
+    "format": "json",
+    "solution_criteria": "Policy must include source IP condition, clearly define allowed IP CIDR block, and limit actions to read-only S3 operations"
   },
   {
-    "task": "Develop a regular expression to validate an AWS IAM user name (lowercase letters, numbers, and specific allowed special characters)",
-    "format": "regex"
+    "task": "Develop a regex to extract AWS resource IDs from a log string",
+    "format": "regex",
+    "solution_criteria": "Regex must match common AWS resource ID patterns like 'i-' for EC2 instances, 'vol-' for EBS volumes, or 'arn:aws:' for ARNs with high accuracy"
   }
 ]
