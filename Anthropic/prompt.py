@@ -48,3 +48,8 @@ def chat(messages, system = None, model="claude-3-7-sonnet-20250219", temperatur
     response = client.messages.create(**params)
     
     return response
+
+def text_from_message(message):
+    return "\n".join(
+        [block.text for block in message.content if block.type == "text"]
+    )
