@@ -16,14 +16,14 @@ def add_assistant_message(messages, text):
     assistant_message = {"role": "assistant", "content": text}
     messages.append(assistant_message)
 
-def chat(messages, system = None, model="claude-3-5-sonnet-20241022", temperature=0.0, stream=False, stop_sequences=None):
+def chat(messages, system = None, model="claude-3-7-sonnet-20250219", temperature=0.0, stream=False, stop_sequences=None, tools=None):
     if not messages:
         raise ValueError("Messages list cannot be empty")
     params = {
         "model": model,
         "max_tokens": 1000,
         "messages": messages,
-        "temperature": temperature
+        "temperature": temperature,
     }
     if system:
         params["system"] = system
@@ -37,6 +37,13 @@ def chat(messages, system = None, model="claude-3-5-sonnet-20241022", temperatur
 
     if stop_sequences:
         params["stop_sequences"] = stop_sequences
+    
+    if tools:
+        params["tools"] = tools
 
     response = client.messages.create(**params)
+    
+    if tools:
+        return response
+
     return response.content[0].text
