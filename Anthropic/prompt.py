@@ -27,7 +27,9 @@ def add_assistant_message(messages, message):
                          "content": message.content if isinstance(message, Message) else message}
     messages.append(assistant_message)
 
-def chat(messages, system = None, model="claude-3-7-sonnet-20250219", temperature=0.0, stream=False, stop_sequences=[], tools=[]):
+def chat(messages, system = None, model="claude-3-7-sonnet-20250219", 
+         temperature=0.0, stream=False, stop_sequences=[], tools=[], 
+         tool_choice=None):
     if not messages:
         raise ValueError("Messages list cannot be empty")
     params = {
@@ -53,6 +55,9 @@ def chat(messages, system = None, model="claude-3-7-sonnet-20250219", temperatur
     
     if tools:
         params["tools"] = tools
+    
+    if tool_choice:
+        params["tool_choice"] = tool_choice
 
     response = client.messages.create(**params)
     
