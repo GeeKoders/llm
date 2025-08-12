@@ -10,12 +10,21 @@ if not Anthropic_API_Key:
 client = Anthropic(api_key=Anthropic_API_Key)
 
 def add_user_message(messages, message):
-    user_message = {"role": "user", 
-                    "content": message.content if isinstance(message, Message) else message}
+    if isinstance(message, list) and all(isinstance(b, dict) and "type" in b for b in message):
+        user_message = {
+            "role": "user",
+            "content": message
+        }
+    else:
+        user_message = {
+            "role": "user",
+            "content": message.content if isinstance(message, Message) else message
+        }
     messages.append(user_message)
 
-def add_assistant_message(messages, text):
-    assistant_message = {"role": "assistant", "content": text}
+def add_assistant_message(messages, message):
+    assistant_message = {"role": "assistant", 
+                         "content": message.content if isinstance(message, Message) else message}
     messages.append(assistant_message)
 
 def chat(messages, system = None, model="claude-3-7-sonnet-20250219", temperature=0.0, stream=False, stop_sequences=[], tools=[]):
