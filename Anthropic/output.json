@@ -1,23 +1,19 @@
 [
   {
-    "output": "Based on the provided athlete information, here's a comprehensive meal plan tailored to their needs:\n\n**Athlete Profile: Ultra-Endurance Performance Optimization**\n* **Calorie Target:** Approximately 3200 calories\n* **Macronutrient Breakdown:** Protein (180g), Fat (100g), Carbs (440g)\n\n**Meal Plan (Gluten-Free, Dairy-Free):**\n\n* **Breakfast (6:30 AM):** Power Performance Bowl\n    - Quinoa (100g, cooked)\n    - Chia seeds (20g)\n    - Almond milk (240g)\n    - Mixed berries (150g)\n    - Almond butter (30g)\n    * Nutrition: Protein 25g, Fat 22g, Carbs 85g\n\n* **Mid-Morning Snack (10:00 AM):** Energy Boost\n    - Coconut water (250g)\n    - Gluten-free rice cakes (60g)\n    - Sunflower seed butter (40g)\n    * Nutrition: Protein 15g, Fat 18g, Carbs 45g\n\n* **Lunch (1:00 PM):** Endurance Protein Bowl\n    - Grilled chicken breast (150g)\n    - Sweet potato (200g)\n    - Mixed green salad (200g)\n    - Olive oil dressing (30g)\n    * Nutrition: Protein 45g, Fat 25g, Carbs 90g\n\n* **Pre-Workout Snack (4:00 PM):** Quick Energy\n    - Banana (150g)\n    - Hemp protein shake with coconut milk (300g)\n    * Nutrition: Protein 30g, Fat 15g, Carbs 70g\n\n* **Dinner (7:00 PM):** Recovery Meal\n    - Wild-caught salmon (180g)\n    - Cauliflower rice (150g)\n    - Roasted vegetables (250g)\n    - Avocado (100g)\n    * Nutrition: Protein 40g, Fat 30g, Carbs 85g\n\n* **Evening Snack (9:30 PM):** Muscle Recovery\n    - Pumpkin seeds (30g)\n    - Gluten-free protein bar\n    * Nutrition: Protein 25g, Fat 15g, Carbs 35g\n\n**Hydration Notes:**\n- Total daily water intake recommendation: 3-4 liters\n- Electrolyte supplementation advised for ultra-endurance training\n\n**Key Considerations:**\n- Meal plan is gluten-free and dairy-free\n- High protein for muscle recovery\n- Complex carbohydrates for sustained energy\n- Healthy fats for hormonal balance and inflammation management\n\n**Performance Nutrition Strategies:**\n- Timing of meals supports high-intensity training\n- Diverse protein sources for complete amino acid profile\n- Anti-inflammatory foods included\n- Nutrient-dense selections to support ultra-endurance goals\n\n**Budget-Friendly Tips:**\n- Buy proteins in bulk\n- Choose seasonal produce\n- Use frozen berries\n- Purchase nuts and seeds in larger quantities\n\nThis meal plan is specifically designed to meet the unique nutritional demands of an ultra-endurance athlete while respecting gluten-free and dairy-free dietary restrictions.",
+    "output": "[\n    \"Cultural Identity\",\n    \"Migration Patterns\", \n    \"Psychological Adaptation\",\n    \"Transnational Communities\",\n    \"Second-Generation Immigrants\",\n    \"Southeast Asian Diaspora\",\n    \"Cultural Negotiation\",\n    \"Hybridized Personal Identities\",\n    \"Multicultural Urban Environments\"\n]",
     "test_case": {
       "prompt_inputs": {
-        "height": "180",
-        "weight": "75",
-        "goal": "Ultra-endurance performance optimization",
-        "restrictions": "Gluten-free, no dairy"
+        "content": "Contemporary anthropological research increasingly examines the complex intersections between cultural identity, migration patterns, and psychological adaptation among transnational communities. By analyzing narrative interviews with second-generation immigrants from Southeast Asian diaspora groups, researchers uncovered nuanced strategies of cultural negotiation, revealing how individuals simultaneously maintain ancestral traditions while constructing fluid, hybridized personal identities in multicultural urban environments."
       },
       "solution_criteria": [
-        "Provides 4000-4500 daily calories",
-        "Maintains 55-60% carbohydrate, 20-25% protein, 20-25% fat macronutrient ratio",
-        "Includes strategic pre/post workout nutrition timing",
-        "Meets gluten-free and dairy-free requirements"
+        "Accurately identify core interdisciplinary research topics",
+        "Capture subtle thematic nuances without oversimplification",
+        "Produce a JSON array representing distinctive topics"
       ],
-      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Test the meal plan generation with an extreme endurance athlete (e.g., ultramarathon runner) requiring high-calorie, nutrient-dense meals with specific macronutrient ratios and timing considerations"
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Handling interdisciplinary academic text with overlapping and nuanced research topics from fields like sociology, psychology, and anthropology, testing the model's ability to parse subtle thematic distinctions and extract precise topical keywords"
     },
-    "score": 4,
-    "reasoning": "While the solution provides a structured meal plan with good nutritional intent, it fails to meet key quantitative criteria around total caloric intake and precise macronutrient ratios. The plan demonstrates nutritional knowledge but does not fully align with the specified performance nutrition requirements for an ultra-endurance athlete."
+    "score": 9,
+    "reasoning": "The solution successfully extracts key research topics from the scholarly text, meeting all mandatory requirements. The topics are substantive, reflect the passage's core themes, and are presented in a clean JSON array. The solution demonstrates a sophisticated understanding of the text's interdisciplinary research focus."
   }
 ]

@@ -1,18 +1,14 @@
 [
   {
     "prompt_inputs": {
-      "height": "180",
-      "weight": "75",
-      "goal": "Ultra-endurance performance optimization",
-      "restrictions": "Gluten-free, no dairy"
+      "content": "Contemporary anthropological research increasingly examines the complex intersections between cultural identity, migration patterns, and psychological adaptation among transnational communities. By analyzing narrative interviews with second-generation immigrants from Southeast Asian diaspora groups, researchers uncovered nuanced strategies of cultural negotiation, revealing how individuals simultaneously maintain ancestral traditions while constructing fluid, hybridized personal identities in multicultural urban environments."
     },
     "solution_criteria": [
-      "Provides 4000-4500 daily calories",
-      "Maintains 55-60% carbohydrate, 20-25% protein, 20-25% fat macronutrient ratio",
-      "Includes strategic pre/post workout nutrition timing",
-      "Meets gluten-free and dairy-free requirements"
+      "Accurately identify core interdisciplinary research topics",
+      "Capture subtle thematic nuances without oversimplification",
+      "Produce a JSON array representing distinctive topics"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Test the meal plan generation with an extreme endurance athlete (e.g., ultramarathon runner) requiring high-calorie, nutrient-dense meals with specific macronutrient ratios and timing considerations"
+    "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+    "scenario": "Handling interdisciplinary academic text with overlapping and nuanced research topics from fields like sociology, psychology, and anthropology, testing the model's ability to parse subtle thematic distinctions and extract precise topical keywords"
   }
 ]
